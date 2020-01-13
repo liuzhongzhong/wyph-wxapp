@@ -1,0 +1,38 @@
+/* pages/yqcx/image/image.wxss */
+.container {
+  display: flex;
+  flex-wrap:wrap;
+}
+image {
+  margin-top: 1rpx;
+  margin-left: 1rpx;
+  width: 248.5rpx;
+  height: 248.5rpx;
+  line-height: 0rpx;
+}
+
+.footer {
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #b2b2b2;
+  font-size: 24rpx;
+}
+
+.warning {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.waring-value {
+  margin-top: 180rpx;
+}
+
+.waring-value text {
+  margin-top: 30rpx;
+  color: #333;
+  font-size: 32rpx;
+}

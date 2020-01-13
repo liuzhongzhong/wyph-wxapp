@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/main/main",
+    "pages/jkcx/index/index",
+    "pages/jkcx/syqk/syqk",
+    
+    
+    
+    
+    "pages/jkcx/yhje/yhje",
+    
+    
+    "pages/jkcx/dqsj/dqsj",
+    "pages/jkcx/image/image",
+    "pages/jkcx/loans/loans",
+    "pages/jkcx/wfjl/wfjl",
+    "pages/jkcx/khjl/khjl",
+    
+    "pages/jkcx/sjzc/sjzc",
+    "pages/jkcx/mqhk/mqhk",
+    "pages/jkcx/sjdz/sjdz",
+    "pages/jkcx/value/value",
+    "pages/jkcx/khxx/khxx",
+  
+    "pages/yqcx/loans/loans",
+    "pages/yqcx/image/image",
+    "pages/yqcx/index/index",
+    "pages/yqcx/value/value"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#5BB0EA",
+    "navigationBarTitleText": "万赢鹏辉企业管理",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false
+  }
+}

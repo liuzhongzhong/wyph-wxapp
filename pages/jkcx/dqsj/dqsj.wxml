@@ -1,0 +1,14 @@
+<!--pages/yqcx/value/value.wxml-->
+<view class='title'>
+    <text>其它信息</text>
+  </view>
+  <view class="value">
+    <view class='line'>
+      <view class='key'>
+        <text>到期时间</text>
+      </view>
+      <view class='item'>
+        <text>{{exp_time}}</text>
+      </view>
+    </view>
+  </view>

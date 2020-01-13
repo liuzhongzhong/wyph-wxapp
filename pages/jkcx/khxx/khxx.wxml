@@ -1,0 +1,26 @@
+<!--pages/yqcx/value/value.wxml-->
+<view class="container">
+
+  <view class='title'>
+    <text>其它信息</text>
+  </view>
+
+  <view class="value">
+    <view class='line'>
+      <view class='key'>
+        <text>身份证号</text>
+      </view>
+      <view class='item'>
+        <text>{{idcard}}</text>
+      </view>
+    </view>
+  </view>
+<view class='title'>
+    <text>详细住址(点击导航)</text>
+  </view>
+  
+  <view class='value address' bindtap='bindAddress'>
+    <text>{{address}}</text>
+  </view>
+
+</view>

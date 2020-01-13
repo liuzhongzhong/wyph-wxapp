@@ -1,0 +1,40 @@
+<!--pages/jkcx/syqk/syqk.wxml-->
+<view container="container">
+  <view class='header'>
+    <view class='first-view'>
+      <text>共{{loan.cyclical}}期</text>
+    </view>
+    <view class='second-view'>
+      <text>已还{{coutRepay}}期 总还款￥{{sumRepay}}</text>
+    </view>
+  </view>
+
+  <view class='main'>
+    <block wx:for="{{repays}}" wx:key="*this">
+      <view class='line'>
+        <view class='line-body'>
+          <view class='view-image'>
+            <text class='number'>{{item.cycles}}</text>
+          </view>
+
+          <view class='info-line'>
+            <view class='info-first'>
+              <text>第{{item.cycles}}期还款</text>
+            </view>
+            <view class='info-second'>
+              <text>{{item.gmt_create}}</text>
+            </view>
+          </view>
+
+          <view class='money-line'>
+            <text class='shouru'>{{item.r_money}}</text>
+          </view>
+        </view>
+
+      </view>
+
+    </block>
+  </view>
+
+  <view class='fotter'>  </view>
+</view>

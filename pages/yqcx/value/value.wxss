@@ -1,0 +1,105 @@
+/* pages/yqcx/value/value.wxss */
+
+page {
+  background-color: #efeff4;
+}
+
+.title {
+  width: 720rpx;
+  height: 80rpx;
+  display: flex;
+}
+
+.title text {
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  font-size: 28rpx;
+  color: #888;
+}
+
+.value {
+  width:749rpx;
+  background-color: #FFF;
+  border: 1rpx solid #E5E5E5;
+}
+
+.line {
+  height: 88rpx;
+  margin-left: 30rpx;
+  width: 719rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.key {
+  width: 150rpx;
+}
+
+.key text {
+  font-size: 34rpx;
+  color: #333;
+}
+
+.item {
+  margin-left: 30rpx;
+  width: 470rpx;
+}
+
+.item text {
+  font-size: 34rpx;
+  color: #b2b2b2;
+}
+
+.address {
+  display: flex;
+  min-height: 150rpx;
+}
+
+.address text {
+  width: 655rpx;
+  padding-left: 30rpx;
+  padding-top: 15rpx;
+  font-size:34rpx;
+  color:#b2b2b2;
+  line-height:50rpx;
+}
+
+.buttom {
+  margin-bottom: 50rpx;
+}
+
+.icon {
+  width: 35rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon image {
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.more image {
+  width: 30rpx;
+  height: 40rpx;
+}
+
+.prompt {
+  color: #B2B2B2;
+  font-size: 24rpx;
+}
+
+.footer {
+  height: 120rpx;
+}
+
+.prompt-view {
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

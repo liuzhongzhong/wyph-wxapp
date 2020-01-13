@@ -1,0 +1,65 @@
+<!--pages/main/main.wxml-->
+<view class='container'>
+  <view class='banner'>
+    <view>
+      <image src='{{userInfo.avatarurl}}' class='header-image'></image>
+    </view>
+    <view>
+      <text>{{userInfo.nickname}}</text>
+    </view>
+  </view>
+
+  <view class='line'>
+    <text>应用中心</text>
+  </view>
+
+  <view>
+    <view class='button-line'>
+      <!-- <view>
+        <image src='/public/image/kehu.png'></image>
+        <text>查客户信息</text>
+      </view> -->
+      <view bindtap='bindYuqi'>
+        <image src='/public/image/yuqi.png'></image>
+        <text>{{functionArray[0]}}</text>
+      </view>
+      <block wx:if="{{userInfo.depart_id != 7}}">
+        <view bindtap='bindJiekuan'>
+          <image src='/public/image/jiekuan.png'></image>
+          <text>{{functionArray[1]}}</text>
+        </view>
+      </block>
+    </view>
+
+    <!-- <view class='button-line'>
+      <view>
+        <image src='/public/image/huankuan.png'></image>
+        <text>查还款信息</text>
+      </view>
+      <view>
+        <image src='/public/image/yueliushui.png'></image>
+        <text>每月流水账单</text>
+      </view>
+      <view>
+        <image src='/public/image/nianliushui.png'></image>
+        <text>年度流水账单</text>
+      </view>
+    </view> -->
+
+    <!-- <view class='button-line'>
+      <view>
+        <image src='/public/image/yuangong.png'></image>
+        <text>查员工信息</text>
+      </view>
+      <view>
+        <image src='/public/image/yingkui.png'></image>
+        <text>每月应亏损</text>
+      </view>
+      <view>
+        <image src='/public/image/houtai.png'></image>
+        <text>后台权限管理</text>
+      </view>
+    </view> -->
+
+  </view>
+</view>

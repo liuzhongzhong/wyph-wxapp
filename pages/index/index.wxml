@@ -1,0 +1,36 @@
+
+<view class="container">
+  <view class='banner'>
+    <view class='banner-text'>
+      <button class='title-button' open-type="getUserInfo" bindgetuserinfo="getUserInfo">{{companyInfo.title}}</button>
+      <text class='subtitle' >{{companyInfo.subtitle}}</text>
+    </view>
+  </view>
+
+  <view class='info'>
+    <text>{{companyInfo.content}}</text>
+  </view>
+
+
+  <view class='detail'>
+    <view class='detail-first-line'>
+      <image class="local" src='/public/image/local.png'></image>
+      <text class='detail-text'>{{companyInfo.location}}</text>
+    </view>
+    <view class='detail-line'>
+      <image src='/public/image/time.png'></image>
+      <text class='detail-text'>{{companyInfo.date}}</text>
+    </view>
+    <view class='detail-line'>
+      <image class="phone" src='/public/image/phone.png'></image>
+      <text class='detail-text'>{{companyInfo.phone}}</text>
+    </view>
+  </view>
+
+  <view class='button'>
+    <block wx:if="{{is_admin != 0}}">
+      <button class='houtai' bindtap="bindAdmin">进入后台</button>
+    </block>
+
+  </view>
+</view>

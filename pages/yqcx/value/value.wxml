@@ -1,0 +1,141 @@
+<!--pages/yqcx/value/value.wxml-->
+<view class="container">
+
+  <view class='title'>
+    <text>客户信息</text>
+  </view>
+
+  <view class="value">
+    <view class='line'>
+      <view class='key'>
+        <text>客户姓名</text>
+      </view>
+      <view class='item'>
+        <text>{{customer.name}}</text>
+      </view>
+    </view>
+    <view class='line' bindtap='bindPhone'>
+      <view class='key'>
+        <text>手机号码</text>
+      </view>
+      <view class='item'>
+        <text>{{customer.phone}}</text>
+      </view>
+      <view class='icon' >
+        <image src='/public/image/boda.png'></image>
+      </view>
+    </view>
+    <view class='line'>
+      <view class='key'>
+        <text>身份证</text>
+      </view>
+      <view class='item'>
+        <text>{{customer.idcard}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='title'>
+    <text>详细住址(点击导航)</text>
+  </view>
+  
+  <view class='value address' bindtap='bindAddress'>
+    <text>{{customer.address}}</text>
+  </view>
+
+
+  <view class='title'>
+    <text>借款信息</text>
+  </view>
+
+  <view class="value">
+    <view class='line'>
+      <view class='key'>
+        <text>借款类型</text>
+      </view>
+      <view class='item'>
+        <text>{{loan.product_name}}</text>
+      </view>
+    </view>
+    <view class='line'>
+      <view class='key'>
+        <text>本金周期</text>
+      </view>
+      <view class='item'>
+        <text>{{loan.principal}}元 / {{loan.cyclical}}期</text>
+      </view>
+    </view>
+    <view class='line'>
+      <view class='key'>
+        <text>借款时间</text>
+      </view>
+      <view class='item'>
+        <text>{{loan.create_time}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='title'>
+    <text>还款信息</text>
+  </view>
+
+  <view class="value">
+    <view class='line'>
+      <view class='key'>
+        <text>每期还款</text>
+      </view>
+      <view class='item'>
+        <text>{{loan.cyc_principal}}元 / {{loan.jiti_cycle}}</text>
+      </view>
+    </view>
+    <view class='line'>
+      <view class='key'>
+        <text>已还金额</text>
+      </view>
+      <view class='item'>
+        <text>{{loan.repay_money}}元 / {{loan.repay_times}}期</text>
+      </view>
+    </view>
+    <view class='line'>
+      <view class='key'>
+        <text>末还时间</text>
+      </view>
+      <view class='item'>
+        <text>{{loan.repay_max_data}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='title'>
+    <text>其它信息</text>
+  </view>
+
+
+  <view class="value">
+    <view class='line' bindtap='bindImage' data-loan_id='{{loan_id}}'>
+      <view class='key'>
+        <text>外访资料</text>
+      </view>
+      <view class='item'>
+        
+      </view>
+      <view class='icon' >
+        <image class="more" src='/public/image/more.png'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='title'>
+    <text>备注信息</text>
+  </view>
+  
+  <view class='value address'>
+    <text>{{loan.remark}}</text>
+  </view>
+
+    <view class='footer'>
+     <view class='prompt-view'>
+      <text class='prompt'>内部资料，严禁外泄</text>
+    </view> 
+  </view>
+</view>

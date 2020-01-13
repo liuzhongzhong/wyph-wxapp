@@ -1,0 +1,245 @@
+<view class='title'>
+  <text>客户信息</text>
+</view>
+
+<view class="value">
+  <view class='line' bindtap='bindCustomer' data-idcard='{{customer.idcard}}' data-address='{{customer.address}}'>
+    <view class='key'>
+      <text>客户姓名</text>
+    </view>
+    <view class='item'>
+      <text>{{customer.name}}</text>
+    </view>
+    <view class='icon'>
+      <image class="more" src='/public/image/more.png'></image>
+    </view>
+  </view>
+  <view class='line' bindtap='bindPhone'>
+    <view class='key'>
+      <text>手机号码</text>
+    </view>
+    <view class='item'>
+      <text>{{customer.phone}}</text>
+    </view>
+    <view class='icon'>
+      <image src='/public/image/boda.png'></image>
+    </view>
+  </view>
+</view>
+
+<view class='title'>
+  <text>借款信息</text>
+</view>
+
+<view class="value">
+  <view class='line'>
+    <view class='key'>
+      <text>借款类型</text>
+    </view>
+    <view class='item'>
+      <text>{{loan.product_name}}</text>
+    </view>
+  </view>
+  <view class='line'>
+    <view class='key'>
+      <text>借款本金</text>
+    </view>
+    <view class='item'>
+      <text>{{loan.principal}}元</text>
+    </view>
+  </view>
+  <view class='line'>
+    <view class='key'>
+      <text>借款周期</text>
+    </view>
+    <view class='item'>
+      <text>{{loan.cyclical}}期</text>
+    </view>
+  </view>
+  <view class='line' bindtap='bindArrival' data-poundage='{{loan.poundage}}' data-bond='{{loan.bond}}'>
+    <view class='key'>
+      <text>实际到账</text>
+    </view>
+    <view class='item'>
+      <text>{{loan.arrival}}元</text>
+    </view>
+    <view class='icon'>
+      <image class="more" src='/public/image/more.png'></image>
+    </view>
+  </view>
+  <view class='line'>
+    <view class='key'>
+      <text>借款状态</text>
+    </view>
+    <view class='item'>
+      <text>{{loan.loan_status_name}}</text>
+    </view>
+  </view>
+  <view class='line' bindtap='bindExptime' data-exp_time='{{loan.exp_time}}'>
+    <view class='key'>
+      <text>借款时间</text>
+    </view>
+    <view class='item'>
+      <text>{{loan.create_time}}</text>
+    </view>
+    <view class='icon'>
+      <image class="more" src='/public/image/more.png'></image>
+    </view>
+  </view>
+</view>
+
+<view class='title'>
+  <text>还款信息</text>
+</view>
+
+<view class="value">
+  <view class='line'>
+    <view class='key'>
+      <text>还款时间</text>
+    </view>
+    <view class='item'>
+      <text>{{loan.jiti_cycle}}</text>
+    </view>
+  </view>
+  <view class='line' bindtap='bindCycle' data-cyc_interest='{{loan.cyc_interest}}' data-every_principal='{{loan.every_principal}}'>
+    <view class='key'>
+      <text>每期还款</text>
+    </view>
+    <view class='item'>
+      <text>{{loan.cyc_principal}}元</text>
+    </view>
+    <view class='icon'>
+      <image class="more" src='/public/image/more.png'></image>
+    </view>
+  </view>
+  <view class='line'>
+    <view class='key'>
+      <text>已还周期</text>
+    </view>
+    <view class='item'>
+      <text>{{loan.repay_times}}期</text>
+    </view>
+  </view>
+</view>
+
+<view class='title'>
+  <text>收支信息</text>
+</view>
+
+<view class="value">
+  <view class='line' bindtap='bindRepay' data-loan_id='{{loan_id}}'>
+    <view class='key'>
+      <text>已还金额</text>
+    </view>
+    <view class='item'>
+      <text>{{loan.repay_money}}元</text>
+    </view>
+    <view class='icon'>
+      <image class="more" src='/public/image/more.png'></image>
+    </view>
+  </view>
+  <view class='line' bindtap='bindExpend' data-arrival='{{loan.arrival}}' data-rebate='{{loan.rebate}}'>
+    <view class='key'>
+      <text>实际支出</text>
+    </view>
+    <view class='item'>
+      <text>{{loan.expenditure}}元</text>
+    </view>
+    <view class='icon'>
+      <image class="more" src='/public/image/more.png'></image>
+    </view>
+  </view>
+  <view class='line' bindtap='bindShouyi' data-loan_id='{{loan_id}}'>
+    <view class='key'>
+      <text>收益情况</text>
+    </view>
+    <view class='item'>
+      <text>{{loan.profit_money}}元</text>
+    </view>
+    <view class='icon'>
+      <image class="more" src='/public/image/more.png'></image>
+    </view>
+  </view>
+</view>
+
+<view class='title'>
+  <text>其它信息</text>
+</view>
+
+
+<view class="value">
+  <view class='line' bindtap='bindStaff' data-loan_id='{{loan.loan_id}}'>
+    <view class='key'>
+      <text>客户经理</text>
+    </view>
+    <view class='item'>
+      <text>{{loan.staff_name}}</text>
+    </view>
+    <view class='icon'>
+      <image class="more" src='/public/image/more.png'></image>
+    </view>
+  </view>
+  <block wx:if="{{loan.foreign_name == '无'}}">
+    <view class='line'>
+      <view class='key'>
+        <text>外访经理</text>
+      </view>
+      <view class='item'>
+        <text>{{loan.foreign_name}}</text>
+      </view>
+      </view>
+  </block>
+  <block wx:else>
+    <view class='line' bindtap='bindForeign' data-loan_id='{{loan.loan_id}}'>
+      <view class='key'>
+        <text>外访经理</text>
+      </view>
+      <view class='item'>
+        <text>{{loan.foreign_name}}</text>
+      </view>
+      <view class='icon'>
+        <image class="more" src='/public/image/more.png'></image>
+      </view>
+    </view>
+
+  </block>
+
+  <view class='line'>
+    <view class='key'>
+      <text>所属公司</text>
+    </view>
+    <view class='item'>
+      <text>{{loan.company_name}}</text>
+    </view>
+    <view class='icon'>
+    </view>
+  </view>
+  <view class='line' bindtap='bindImage' data-loan_id='{{loan_id}}'>
+    <view class='key'>
+
+      <text>外访照片</text>
+    </view>
+    <view class='item'>
+      <!-- <text>{{loan.count_mages}}张</text> -->
+
+    </view>
+    <view class='icon'>
+      <image class="more" src='/public/image/more.png'></image>
+    </view>
+  </view>
+  </view>
+
+  <view class='title'>
+    <text>备注信息</text>
+  </view>
+
+  <view class='value address'>
+    <text>{{loan.remark}}</text>
+  </view>
+
+  <view class='footer'>
+     <view class='prompt-view'>
+      <text class='prompt'>内部资料，严禁外泄</text>
+    </view> 
+  </view>
+

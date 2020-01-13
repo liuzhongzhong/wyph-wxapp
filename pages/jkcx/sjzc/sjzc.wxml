@@ -1,0 +1,28 @@
+<!--pages/yqcx/value/value.wxml-->
+<view class="container">
+
+  <view class='title'>
+    <text>其它信息</text>
+  </view>
+
+  <view class="value">
+    <view class='line'>
+      <view class='key'>
+        <text>借款本金</text>
+      </view>
+      <view class='item'>
+        <text>{{arrival}}元</text>
+      </view>
+    </view>
+    <view class='line' bindtap='bindPhone'>
+      <view class='key'>
+        <text>业务返点</text>
+      </view>
+      <view class='item'>
+        <text>{{rebate}}元</text>
+      </view>
+    </view>
+  </view>
+
+  
+</view>

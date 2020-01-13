@@ -1,0 +1,120 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.banner {
+  width:750rpx;
+  height:356rpx; 
+  background-color: #5BB0EA;
+}
+
+.banner-text {
+ 
+  height:100%; 
+  display: flex;
+  justify-content: center;
+  flex-direction:column;
+  align-items: center;
+  color: white;
+}
+
+.title {
+  font-size:56rpx;
+}
+
+.title-button {
+  font-size:56rpx;
+  background-color: #5BB0EA;
+  color: #fff;
+  border: none;
+}
+
+button::after {
+    border: none;
+}
+
+.subtitle {
+  font-size:24rpx;
+}
+
+.info {
+  margin-top: 50rpx;
+  margin-left: 50rpx;
+  width:650rpx;
+  height:320rpx; 
+  font-size:32rpx;
+  color:rgba(178,178,178,1);
+  line-height:56rpx;
+  border-bottom:1rpx solid #f0f0f0;
+}
+
+image {
+  width: 25rpx;
+  height: 25rpx;
+}
+
+.local {
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.phone {
+  width: 23rpx;
+  height: 23rpx;
+}
+
+.detail {
+  margin-top: 38rpx;
+  margin-left:74rpx;
+}
+
+.detail-text {
+  padding-left: 22rpx;
+  line-height:42rpx;
+  font-size:30rpx;
+  color: #333333;
+}
+
+.detail-line {
+  margin-top: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.detail-first-line {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  margin-top: 50rpx;
+}
+
+.houtai {
+  width:558rpx;
+  height:80rpx; 
+  background:rgba(91,176,234,1);
+  border-radius: 16px ; 
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

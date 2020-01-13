@@ -1,0 +1,187 @@
+/* pages/yqcx/index/index.wxss */
+
+.banner {
+  margin-top: 140rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.banner text {
+  font-size: 56rpx;
+  color: #5BB0EA;
+}
+
+.subbanner {
+  margin-top: 26rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.subbanner text {
+  font-size: 36rpx;
+  color: #B2B2B2;
+}
+
+.input {
+  margin-top: 96rpx;
+  margin-left: 40rpx;
+  width: 670rpx;
+  height: 96rpx;
+  background-color: #F0F0F0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.search {
+  width: 88rpx;
+  height: 96rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.input text {
+  font-size: 28rpx;
+  color: #74AA35;
+}
+
+input {
+  height: 96rpx;
+  width: 475rpx;
+  font-size: 30rpx;
+}
+
+.fenge {
+  width: 1rpx;
+  height: 50rpx;
+  background-color: #e0e0e0;
+}
+
+.button {
+  width: 100rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.value {
+  margin-top: 90rpx;
+  min-height: 450rpx;
+}
+
+.line {
+   margin-left: 40rpx;
+   width: 670rpx;
+   height: 140rpx;
+   border-bottom: 1rpx solid #F0F0F0;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.default {
+  height: 140rpx;
+  width: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.default image {
+  width: 90rpx;
+  height: 90rpx;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+  width: 400rpx; 
+}
+
+.company {
+  display: flex;
+  flex-direction: column;
+  width: 120rpx;
+}
+
+.company text{
+  font-size: 24rpx;
+  color: #333;
+}
+
+.name {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.idcard {
+  padding-top: 5rpx;
+  font-size: 24rpx;
+  color: #888888;
+}
+
+.more {
+  display: flex;
+  align-items: center;
+}
+
+
+.more image {
+  width: 30rpx;
+  height: 40rpx;
+}
+
+.warning {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.waring-value {
+  margin-top: 180rpx;
+}
+
+.waring-value text {
+  margin-top: 30rpx;
+  color: #333;
+  font-size: 32rpx;
+}
+
+.prompt {
+  color: #B2B2B2;
+  font-size: 24rpx;
+}
+
+.remind {
+  color: #b2b2b2;
+  font-size: 24rpx;
+}
+
+.footer {
+  width: 690rpx;
+  display: flex;
+  margin-left: 30rpx;
+  flex-direction:column;
+}
+
+.prompt-view {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.remind-view {
+  margin-left: 20rpx;
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+  display: flex;
+  justify-content: center;
+  width: 650rpx;
+}

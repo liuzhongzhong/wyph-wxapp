@@ -1,0 +1,31 @@
+<!--pages/yqcx/loans/loans.wxml-->
+<view class='container'>
+  <view class='title'>
+    <text>共{{countLoans}}条借款记录</text>
+  </view>
+
+  <view class="value">
+    <block wx:for="{{loansArray}}" wx:key="*this">
+      <view class='line' bindtap='bindValue' data-loan_id='{{item.loan_id}}'>
+      <view class='info'>
+        <text class='main'>{{item.principal}}元</text>
+        <text class='sub'>{{item.create_time}}</text>
+      </view>
+      <view class='status'>
+        <block wx:if="{{item.loan_status == 1}}">
+          <text class='text-status status-jieqing'>已结清</text>
+        </block>
+        <block wx:elif="{{item.loan_status == 0}}">
+          <text class='text-status status-huankuan'>还款中</text>
+        </block>
+        <block wx:elif="{{item.loan_status == -1}}">
+          <text class='text-status status-yuqi'>已逾期</text>
+        </block>
+      </view>
+      <view class='more'>
+        <image src='/public/image/more.png'></image>
+      </view>
+    </view>
+    </block>
+  </view>
+</view>

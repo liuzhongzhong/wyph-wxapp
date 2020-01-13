@@ -1,0 +1,54 @@
+/* pages/yqcx/value/value.wxss */
+
+page {
+  background-color: #efeff4;
+}
+
+.title {
+  width: 720rpx;
+  height: 80rpx;
+  display: flex;
+}
+
+.title text {
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  font-size: 28rpx;
+  color: #888;
+}
+
+.value {
+  width:749rpx;
+  background-color: #FFF;
+  border: 1rpx solid #E5E5E5;
+}
+
+.line {
+  height: 88rpx;
+  margin-left: 30rpx;
+  width: 719rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+ .key {
+  width: 150rpx;
+}
+
+.key text {
+  font-size: 34rpx;
+  color: #333;
+}
+
+.item {
+  margin-left: 30rpx;
+  width: 470rpx;
+}
+
+.item text {
+  font-size: 34rpx;
+  color: #888888;
+} 
+

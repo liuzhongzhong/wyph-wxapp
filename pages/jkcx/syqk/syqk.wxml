@@ -1,0 +1,51 @@
+<!--pages/jkcx/syqk/syqk.wxml-->
+<view container="container">
+  <view class='header'>
+    <view class='first-view'>
+      <text>收益情况{{lirun}}元</text>
+    </view>
+    <view class='second-view'>
+      <text>总支出￥{{zhichu}} 总收入￥{{shouru}}</text>
+    </view>
+  </view>
+
+  <view class='main'>
+    <block wx:for="{{earnArray}}" wx:key="*this">
+      <view class='line'>
+        <view class='line-body'>
+          <block wx:if="{{item.loss == 1}}">
+            <view class='view-image'>
+              <image src='/public/image/shouru.png'></image>
+            </view>
+          </block>
+          <block wx:else>
+            <view class='view-image'>
+              <image src='/public/image/zhichu.png'></image>
+            </view>
+          </block>
+
+          <view class='info-line'>
+            <view class='info-first'>
+              <text>{{item.content}}</text>
+            </view>
+            <!-- <view class='info-second'>
+          <text>2018年01月25日</text>
+        </view> -->
+          </view>
+          <block wx:if="{{item.loss == 1}}">
+            <view class='money-line'>
+            <text class='shouru'>{{item.money}}</text>
+          </view>
+          </block>
+          <block wx:else>
+            <view class='money-line'>
+            <text class='zhichu'>{{item.money}}</text>
+          </view>
+          </block>
+        </view>
+      </view>
+
+    </block>
+
+  </view>
+</view>

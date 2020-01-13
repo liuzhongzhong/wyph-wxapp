@@ -1,0 +1,23 @@
+<!--pages/yqcx/image/image.wxml-->
+
+
+
+<block wx:if="{{!hasImage}}">
+  <view class="waring-value">
+    <view class='warning'>
+      <icon type="warn" size="100" />
+      <text>{{noneMessage}}</text>
+    </view>
+  </view>
+</block>
+<block wx:else>
+  <view class='container'>
+    <block wx:for="{{imageArray}}" wx:key="*this">
+      <image mode="aspectFill" src='{{item}}' bindtap='bindPreviewImage' data-url='{{item}}'></image>
+    </block>
+  </view>
+
+  <view class='footer'>
+    <text>共{{countImage}}张</text>
+  </view>
+</block>

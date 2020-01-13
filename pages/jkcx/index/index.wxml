@@ -1,0 +1,72 @@
+<!--pages/yqcx/index/index.wxml-->
+<view class='container'>
+  <view class='banner'>
+    <!-- <text>万赢企业管理一部</text> -->
+    <text>{{company_name}}</text>
+  </view>
+  <view class='subbanner'>
+    <text>客户借款信息查询</text>
+  </view>
+
+  <view>
+    <view class='input'>
+      <view class='search'>
+        <image src='/public/image/search.png'></image>
+      </view>
+      <input placeholder="请输入客户的姓名" bindinput="bindKeyInput"></input>
+      <view class='fenge'></view>
+      <view class='button' bindtap='bindSearch'>
+        <text>查询</text>
+      </view>
+
+    </view>
+  </view>
+
+
+  <block wx:if="{{!hasCustomer}}">
+    <view class="waring-value">
+      <view class='warning'>
+        <icon type="warn" size="100" />
+        <text>{{falseMessage}}</text>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="value">
+
+      <block wx:for="{{customersArray}}" wx:key="*this">
+        <view class="line" bindtap='bindLoan' data-id="{{item.id}}" data-count="{{item.countLoans}}" data-loan_id="{{item.loan_id}}">
+          <view class='default'>
+            <image src='/public/image/default.png'></image>
+          </view>
+          <view class='info'>
+            <text class='name'>{{item.name}}</text>
+            <text class='idcard'>{{item.idcard}}</text>
+          </view>
+
+          <view class='company'>
+            <block wx:if="{{depart_id == 1}}">
+              <text>{{item.company_name}}</text>
+            </block>
+
+          </view>
+          <view class='more'>
+
+            <image src='/public/image/more.png'></image>
+          </view>
+        </view>
+      </block>
+    </view>
+  </block>
+
+  <view class='footer'>
+    <!-- <view class='prompt-view'>
+      <text class='prompt'>内部资料，严禁外泄</text>
+    </view> -->
+    <view class='remind-view'>
+      <text class='remind'>友情提醒：您的每一次信息查询操作，系统后台都会进行记录，如有违反《保密协议》的行为，公司将追究法律责任。</text>
+    </view>
+  </view>
+
+
+</view>
